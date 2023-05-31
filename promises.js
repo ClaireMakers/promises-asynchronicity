@@ -18,6 +18,7 @@ function eatFood() {
 
 //You can build a promise from scratch using the Promise class that's in-built in JavaScript 
 //The constructor will take a callback function with 2 arguments: resolve, reject
+//Quick refresher: callback functions are function passed as ARGUMENTS to other functions.
 
 const promiseToWakeUp = new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -35,6 +36,7 @@ const promiseToWakeUp = new Promise((resolve, reject) => {
         reject("how dare she leave me to starve?!!");
       }
     })
+  //.then() is a method you can call on a promise object - it takes a callback function as an argument
 }).then((string) => {
   //the string here is "meow until she's woken up" as it's what wakeUpClaire returns
     console.log(string);
